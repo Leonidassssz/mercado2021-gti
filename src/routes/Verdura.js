@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { check, validationResult } = require('express-validator')
 
-const Verdura = require('../model/verdura')
+const Verdura = require('../model/Verdura')
 const validaverdura = [
     check("nome","Nome da Verdura é obrigatória!").not().isEmpty(),
     check("status","Informe um status válido para a Verdura").isIn(['ativo','inativo']),
