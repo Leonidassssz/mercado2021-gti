@@ -1,0 +1,45 @@
+// Teste da API REST - verduras
+
+@baseURL = http://localhost:4000
+@id = 615ba0fe153578951aebbf5c
+
+###
+// GET - Listar todas as verduras
+GET {{baseURL}}/verdura
+Content-Type: application/json
+
+###
+// GET - Listar a verduras pelo id
+GET {{baseURL}}/Verdura/{{id}}
+Content-Type: application/json
+
+####
+// DELETE - Apaga uma verduras pelo id
+DELETE {{baseURL}}/Verdura/{{id}}
+Content-Type: application/json
+
+###
+// POST - Incluir uma nova verduras
+POST {{baseURL}}/verdura
+Content-Type: application/json
+
+{
+   "nome": "Abobrinha",
+   "tipo": "Verde",
+   "local": "Mercado 123",
+   "quantidade": "61",
+   "status": "ativo" 
+}
+
+###
+// PUT - Altera uma verduras
+PUT {{baseURL}}/Verdura
+Content-Type: application/json
+
+{ "_id": "615cd4a23edd996c6e4c05bd",
+   "nome": "Alface",
+   "tipo": "Americana",
+   "local": "Mercadinho",
+   "quantidade": "124",
+   "status": "ativo" 
+}
